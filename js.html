@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Manipulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .note {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #4285f4;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 8px 16px;
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #3367d6;
+        }
+        #dynamic-content {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DOM Manipulation Exercise</h1>
+    </header>
+    
+    <main>
+        <section class="note">
+            <h2>Note</h2>
+            <p>This page demonstrates dynamic content changes using JavaScript.</p>
+        </section>
+        
+        <article id="dynamic-content">
+            <h2>Original Content</h2>
+            <p>This text will be changed by JavaScript.</p>
+        </article>
+        
+        <div class="controls">
+            <button id="change-text">Change Text</button>
+            <button id="change-style">Change Style</button>
+            <button id="toggle-element">Toggle Element</button>
+        </div>
+        
+        <div id="temporary-element" style="display: none;">
+            <p>This element appears and disappears when you click the toggle button.</p>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2023 JavaScript Practice</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
