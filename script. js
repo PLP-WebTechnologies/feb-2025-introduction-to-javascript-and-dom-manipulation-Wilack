@@ -1,0 +1,34 @@
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Get references to elements
+    const changeTextBtn = document.getElementById('change-text');
+    const changeStyleBtn = document.getElementById('change-style');
+    const toggleElementBtn = document.getElementById('toggle-element');
+    const dynamicContent = document.getElementById('dynamic-content');
+    const tempElement = document.getElementById('temporary-element');
+    
+    // 1. Change text content dynamically
+    changeTextBtn.addEventListener('click', function() {
+        dynamicContent.querySelector('h2').textContent = 'Updated Content';
+        dynamicContent.querySelector('p').textContent = 'The text has been changed by JavaScript!';
+    });
+    
+    // 2. Modify CSS styles via JavaScript
+    changeStyleBtn.addEventListener('click', function() {
+        dynamicContent.style.backgroundColor = '#e8f4f8';
+        dynamicContent.style.borderColor = '#34a853';
+        dynamicContent.style.color = '#202124';
+        dynamicContent.style.fontFamily = 'Georgia, serif';
+    });
+    
+    // 3. Add or remove an element when a button is clicked
+    toggleElementBtn.addEventListener('click', function() {
+        if (tempElement.style.display === 'none') {
+            tempElement.style.display = 'block';
+            toggleElementBtn.textContent = 'Hide Element';
+        } else {
+            tempElement.style.display = 'none';
+            toggleElementBtn.textContent = 'Show Element';
+        }
+    });
+});
